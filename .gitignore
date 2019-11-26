@@ -1,3 +1,7 @@
-.idea/*
+/.idea
+/.vscode
+/vendor
+*.log
+.env
 *.iml
 .env
