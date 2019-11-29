@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.socket.io/socket.io-1.4.4.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+
+<div>
+    <div>
+        返回内容:
+    </div>
+    <div style="width: 600px;height: 600px" id="content">
+
+    </div>
+</div>
+<div>
+    在控制台中执行 socket.emit("test",{"asd":"我是内容"})
+</div>
+<script>
+    const socket = io('http://localhost:8882');
+    //    socket.emit("test", "your message");
+    socket.on("testcallback", function (res) {
+        console.log(res)
+        $('#content').html($('#content').html()+JSON.stringify(res)+"<br>");
+    });
+</script>
+</body>
+</html>

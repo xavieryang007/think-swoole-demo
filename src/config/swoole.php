@@ -1,5 +1,6 @@
 <?php
 
+use app\listener\WebsocketTest;
 use think\swoole\websocket\socketio\Handler;
 use think\swoole\websocket\socketio\Parser;
 
@@ -29,7 +30,7 @@ return [
         ],
     ],
     'websocket'  => [
-        'enable'        => false,
+        'enable'        => true,
         'handler'       => Handler::class,
         'parser'        => Parser::class,
         'ping_interval' => 25000,
@@ -46,7 +47,9 @@ return [
 
             ],
         ],
-        'listen'        => [],
+        'listen'        => [
+            'test' => WebsocketTest::class,
+        ],
         'subscribe'     => [],
     ],
     'rpc'        => [
