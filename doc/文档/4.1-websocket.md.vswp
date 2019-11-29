@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 /Users/xavier/code/php/think-swoole-demo/doc/文档/4.1-websocket.md
 # Websocket基础使用
 
 最近的版本和初期版本有了很大差别，其中websocket路由这块就取消了，所以Websocket的使用方式也改变了。
