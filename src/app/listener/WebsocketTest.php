@@ -22,7 +22,7 @@ class WebsocketTest
      */
     public function handle($event)
     {
-        //
+        //$event 为从客户端接收的数据
         $this->websocket->emit("testcallback", ['aaaaa' => 1, 'getdata' => $event['asd']]);
     }
 }
