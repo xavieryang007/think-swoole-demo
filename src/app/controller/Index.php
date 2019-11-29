@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controller;
 
 use app\BaseController;
@@ -13,5 +14,11 @@ class Index extends BaseController
     public function hello($name = 'ThinkPHP6')
     {
         return 'hello,' . $name;
+    }
+
+    public function demo()
+    {
+        var_dump($this->request->param("demo"));
+        return "我是demo";
     }
 }
