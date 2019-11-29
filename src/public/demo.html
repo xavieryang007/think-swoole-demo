@@ -19,6 +19,12 @@
 <div>
     在控制台中执行 socket.emit("test",{"asd":"我是内容"})
 </div>
+<div>
+    在控制台中执行 socket.emit("join",{"room":"roomtest"})  加入房间
+</div>
+<div>
+    在控制台中执行 socket.emit("leave",{"room":["roomtest"]})  离开房间
+</div>
 <script>
     const socket = io('http://localhost:8882');
     //    socket.emit("test", "your message");

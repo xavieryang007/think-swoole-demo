@@ -24,5 +24,7 @@ class WebsocketTest
     {
         //$event 为从客户端接收的数据
         $this->websocket->emit("testcallback", ['aaaaa' => 1, 'getdata' => $event['asd']]);
+        //增加如下内容，表示进行对指定room进行群发
+        $this->websocket->to('roomtest')->emit("testcallback", ['guangbo' => 1, 'getdata' => $event['asd']]);
     }
 }

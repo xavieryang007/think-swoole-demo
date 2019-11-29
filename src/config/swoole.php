@@ -48,7 +48,9 @@ return [
             ],
         ],
         'listen'        => [
-            'test' => WebsocketTest::class,
+            'test'  => WebsocketTest::class,
+            'join'  => \app\listener\RoomJoin::class,
+            'leave' => \app\listener\RoomLeave::class,
         ],
         'subscribe'     => [],
     ],
