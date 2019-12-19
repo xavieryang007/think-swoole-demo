@@ -56,12 +56,18 @@ return [
     ],
     'rpc'        => [
         'server' => [
-            'enable'   => false,
+            'enable'   => true,
             'port'     => 9000,
             'services' => [
+                'TestService' => \app\rpc\services\TestService::class,
+                'DemoService' => \app\rpc\services\DemoService::class,
             ],
         ],
         'client' => [
+            'Test'=>[
+                'host'=>'127.0.0.1',
+                'port'=>9000,
+            ],
         ],
     ],
     'hot_update' => [

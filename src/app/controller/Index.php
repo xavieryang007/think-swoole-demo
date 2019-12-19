@@ -3,6 +3,7 @@
 namespace app\controller;
 
 use app\BaseController;
+use rpc\contract\Test\DemoInterface;
 
 class Index extends BaseController
 {
@@ -20,5 +21,10 @@ class Index extends BaseController
     {
         var_dump($this->request->param("demo"));
         return "我是demo";
+    }
+
+    public function testrpc(DemoInterface $demo)
+    {
+        return $demo->inc(1);
     }
 }
