@@ -1,17 +1,22 @@
 <?php
 // 事件定义文件
 return [
-    'bind'      => [
+    'bind' => [
+
     ],
 
-    'listen'    => [
+    'listen' => [
         'AppInit'  => [],
         'HttpRun'  => [],
         'HttpEnd'  => [],
         'LogLevel' => [],
         'LogWrite' => [],
+        'swoole.task'   => [
+            \app\listener\TaskTest::class
+        ],
     ],
 
     'subscribe' => [
     ],
+
 ];

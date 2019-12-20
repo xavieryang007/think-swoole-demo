@@ -4,6 +4,7 @@ namespace app\controller;
 
 use app\BaseController;
 use rpc\contract\Test\DemoInterface;
+use Swoole\Server;
 
 class Index extends BaseController
 {
@@ -23,8 +24,9 @@ class Index extends BaseController
         return "我是demo";
     }
 
-    public function testrpc(DemoInterface $demo)
+    public function testrpc(DemoInterface $demo,Server $server)
     {
+        $server->task(1111);
         return $demo->inc(1);
     }
 }
